@@ -1,0 +1,717 @@
+/* 
+border color: rgb(180, 180, 180);
+kolor linków z menu: color: rgb(192, 192, 192);
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10px;
+    /* overflow-x: hidden; */
+}
+
+h2 {
+    font-size: 2.3rem;
+    text-transform: uppercase;
+    color: rgb(112, 112, 112);
+    letter-spacing: 2px;
+    font-weight: 200;
+}
+
+section {
+    min-height: 20vh;
+    background-color: #fff;
+    padding: 8vh 80px;
+    position: relative;
+    font-size: 1.4rem;
+    color: rgb(175, 174, 174);
+    letter-spacing: 1px;
+    font-weight: 200;
+    line-height: 1.6;
+}
+
+.logo {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 30px;
+    text-transform: uppercase;
+    min-width: 100px;
+    line-height: 1.7;
+    cursor: pointer;
+
+}
+
+.logo a h1 {
+    border-bottom: 1px solid rgb(82, 82, 82);
+}
+
+.logo a {
+    display: block;
+    text-decoration: none;
+    font-size: .85rem;
+    letter-spacing: 4px;
+    color: #fff;
+
+}
+
+nav {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.80);
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 8vh;
+    z-index: 1;
+    /* position: relative; */
+
+}
+
+nav .navmenu {
+    display: flex;
+    flex-wrap: nowrap;
+    position: absolute;
+    justify-content: space-around;
+    align-content: flex-start;
+    top: 50%;
+    right: 3%;
+    transform: translateY(-50%);
+    width: 75%;
+
+}
+
+nav .navmenu li {
+    list-style: none;
+    /* flex-basis: 100px; */
+
+    text-align: center;
+}
+
+nav .navmenu li a {
+    /* display: inline-block; */
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(192, 192, 192);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    /* padding: 0 10%; */
+    /* line-height: 7vh; */
+    transition: 0.3s;
+}
+
+nav .navmenu li a i {
+    font-size: .8rem;
+    line-height: 8vh;
+}
+
+nav .navmenu li a:hover {
+    color: #fff;
+
+}
+
+/* pomiń search i carton */
+nav .navmenu li a:hover i:not(.fa-cart-arrow-down):not(.fa-search) {
+    transform: rotate(-45deg)
+}
+
+/* rozwijane menu 1*/
+nav ul li .sub-menu {
+    list-style: none;
+    display: none;
+    background: rgba(0, 0, 0, 0.75);
+}
+
+nav ul li .sub-menu li {
+    list-style: none;
+    height: 5vh;
+}
+
+nav ul li .sub-menu li a {
+    display: block;
+    padding: 10px 20px;
+
+}
+
+nav ul li:hover .sub-menu {
+    display: flex;
+    border-radius: 0% 0% 3% 3%;
+    /* min-width: 10%; */
+    flex-direction: column;
+    background: rgb(0, 0, 0, 0.75);
+    position: absolute;
+    top: calc(8vh - 1px);
+}
+
+/* header */
+
+header {
+    background-image: url(/img/motto.jpg);
+    filter: grayscale(0.65) brightness(0.9);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    /* position: relative; */
+}
+
+
+header .header-textblock {
+    position: absolute;
+    left: 50px;
+    bottom: 170px;
+    color: rgb(192, 192, 192);
+
+    /* background: rgb(151, 9, 9); */
+
+}
+
+header h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 30px;
+    color: #fff;
+    line-height: 10rem;
+    font-weight: 300;
+
+
+}
+
+header h2 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-weight: 300;
+    color: rgb(172, 172, 172);
+}
+
+header button {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-45deg);
+    background: rgba(255, 255, 255, 0.8);
+    color: rgb(192, 192, 192);
+    border-radius: 12%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    box-shadow: 0;
+    outline-offset: -2px;
+}
+
+
+header button div {
+    transform: rotate(45deg)
+}
+
+header button:active,
+header button:focus,
+header button {
+    border: 1px solid rgb(0, 0, 0);
+}
+
+header button:hover {
+    box-shadow: 0px 0px 10px 1px rgb(92, 92, 92);
+    /* border: 1px solid rgb(255, 25, 25); */
+}
+
+header button i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    line-height: 2rem;
+    text-align: center;
+    transform: rotate(-45deg) translateX(-50%);
+    font-size: 1.5rem;
+    color: #38393B;
+    animation: buttondown 1.5s infinite ease-out;
+}
+
+@keyframes buttondown {
+    0% {
+        transform: translate(-50%, -7px);
+    }
+
+    30% {
+        transform: translate(-50%, 7px);
+    }
+
+    100% {
+        transform: translate(-50%, -10px);
+    }
+}
+
+/* dolna linia sekcji */
+.bottom-line {
+    width: 100%;
+    border-bottom: 1px solid rgba(207, 207, 207, 0.6);
+}
+
+
+
+.flex-container {
+    display: flex;
+    padding: 3% 0;
+    height: 100%;
+    ;
+}
+
+
+/* sekcja 1 about */
+
+section.about .more-info {
+
+    position: absolute;
+    top: 100px;
+    right: 100px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgb(175, 174, 174);
+    transition: 0.4s;
+    line-height: 1rem;
+}
+
+section.about .more-info:hover {
+    color: rgb(97, 97, 97);
+}
+
+section.about .more-info i {
+    position: absolute;
+    top: 0;
+    right: -20px;
+    font-size: 1rem;
+    /* color: rgb(196, 196, 196); */
+    transform: rotate(-90deg);
+
+
+}
+
+section.about .progress-bars {
+    font-size: 1rem;
+    padding-top: 2%;
+    font-size: 0;
+    flex-basis: 30%;
+    margin-right: 3%;
+    display: flex;
+    flex-direction: column;
+    /* background: #666; */
+}
+
+.progress-bar-bg {
+    background-color: rgb(230, 230, 230);
+    height: 2px;
+    margin-bottom: 70px;
+}
+
+.progress-bar-bg .progress-bar-value {
+    background-color: rgb(59, 59, 59);
+    height: 2px;
+}
+
+/* postęp w progressbarach*/
+.progress-bars .progress-bar-bg:nth-child(1) .progress-bar-value {
+    width: 50%;
+}
+
+.progress-bars .progress-bar-bg:nth-child(2) .progress-bar-value {
+    width: 90%;
+}
+
+.progress-bars .progress-bar-bg:nth-child(3) .progress-bar-value {
+    width: 75%;
+}
+
+/* położenie procentów w progresach */
+.progress-bars .progress-bar-bg:nth-child(1) .progress-description .progress-percent {
+    position: absolute;
+    left: calc(50% - 15px);
+    color: rgb(0, 0, 0);
+}
+
+.progress-bars .progress-bar-bg:nth-child(2) .progress-description .progress-percent {
+    position: absolute;
+    left: calc(90% - 15px);
+    color: rgb(0, 0, 0);
+}
+
+.progress-bars .progress-bar-bg:nth-child(3) .progress-description .progress-percent {
+    position: absolute;
+    left: calc(75% - 15px);
+    color: rgb(0, 0, 0);
+}
+
+.progress-bar-bg .progress-description {
+    position: relative;
+    font-size: 1.2rem;
+    color: rgb(37, 37, 37)
+        /* background: red; */
+}
+
+/* układ dwu-kolumnowy */
+section.about .two-columns {
+
+    flex-basis: 50vw;
+    flex-grow: 2;
+    padding: 1%;
+    column-count: 2;
+    height: 100%;
+    color: #000;
+    /* line-height: 2.5rem; */
+
+}
+
+/* sekcja 2 services */
+.services {
+    display: flex;
+    flex-direction: column;
+}
+
+.services h2 {
+    text-align: center;
+}
+
+.vector-images {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.vector-image {
+    /* flex-grow: 1; */
+    flex-basis: 10px;
+    justify-content: center;
+}
+
+.vector-image .vector-description {
+    text-align: center;
+    padding: 15px;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    ;
+}
+
+.vector-image i {
+    margin: 0 auto;
+    font-size: 8rem;
+    color: rgba(100, 100, 100, 0.582);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.vector-image:hover>* {
+    color: rgb(54, 54, 54);
+}
+
+.services .text-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+}
+
+.services .text-content .citate {
+    font-size: 1.8rem;
+    flex-grow: 1;
+    flex-basis: 180px;
+    padding: 0 5% 0 0;
+    color: rgb(63, 63, 63);
+    line-height: 3.5rem;
+    letter-spacing: 3px;
+}
+
+.citate .citate-author {
+    display: block;
+    padding-top: 40px;
+    letter-spacing: 2px;
+    color: #000;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.services .text-content .two-columns {
+    flex-basis: 50px;
+    flex-grow: 5;
+    columns: 2;
+    color: #000;
+}
+
+.services .more-info {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgb(175, 174, 174);
+    transition: 0.4s;
+    line-height: 1rem;
+}
+
+.services .more-info i {
+    transform: rotate(-90deg)
+}
+
+.services .more-info:hover {
+    color: rgb(97, 97, 97);
+
+
+}
+
+/* motto */
+
+
+.motto {
+    background-image: url(/img/baner22.jpg);
+
+    filter: grayscale(0.85);
+    background-position: 50% 50%;
+    background-size: cover;
+    /* background-attachment: fixed; */
+
+}
+
+.motto h2 {
+    color: rgb(241, 241, 241);
+    margin-bottom: 50px;
+    text-align: center;
+    text-shadow: 0px 0px 3px rgb(255, 255, 255);
+
+}
+
+.motto h3 {
+    color: rgb(241, 241, 241);
+    margin-bottom: 50px;
+    font-weight: 200;
+    font-size: 2.1rem;
+    text-shadow: 0px 0px 3px rgb(41, 41, 41);
+}
+
+.motto button,
+.work button {
+    position: absolute;
+    right: 10%;
+    bottom: 15%;
+    padding: 10px 40px;
+    border-radius: 3px;
+    border: 0;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    font-weight: 200;
+    background-color: rgb(221, 221, 221);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.motto button:hover,
+.work button:hover {
+    background-color: #fff;
+}
+
+/* ostatnie projekty */
+.work {
+    padding: 7% 0;
+    margin: 0;
+    width: 100%;
+    position: relative;
+}
+
+.work h2 {
+    text-align: center;
+}
+
+.work h2+div {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: #999;
+}
+
+.work .images {
+
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+
+}
+
+.work .images img {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    filter: grayscale(0.6);
+    transition: 0.5s;
+}
+
+
+.work .images .image {
+    position: relative;
+    flex-grow: 0;
+    width: 32%;
+    overflow: hidden;
+    transition: 2s;
+}
+
+.work .images .image:hover img {
+    transform: scale(1.1);
+}
+
+.work .images .image:hover>.mask {
+    bottom: 0px;
+}
+
+.work .images .mask {
+    position: absolute;
+    bottom: -500px;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+}
+
+.work .images .mask div {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 20px 20px;
+    color: #000;
+    width: 100%;
+    opacity: 1;
+    font-weight: 400;
+}
+
+.work .images .mask div div {
+    bottom: -15px;
+    text-align: center;
+    font-size: 1.1rem;
+    /* text-transform: uppercase; */
+    letter-spacing: 1px;
+    color: #000;
+
+}
+
+.work .more-info {
+    background-color: rgba(0, 0, 0, 0.931);
+    height: 30vh;
+    margin-top: 1%;
+    padding: 50px;
+    text-align: center;
+
+}
+
+/* todo: poprawić przycisk */
+.work .more-info button {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    width: 250px;
+    max-width: 250px;
+
+}
+
+/* dlaczego my */
+.whywe {}
+
+.whywe h2 {
+    text-align: center;
+}
+
+.whywe .features {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-around;
+}
+
+.whywe .features .feature {
+    flex-basis: 30%;
+    position: relative;
+}
+
+.whywe .features .feature i {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    padding: 5%;
+    font-size: 6rem;
+    color: rgb(173, 173, 173);
+}
+
+.whywe .features .feature h3 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 200;
+    padding: 15px;
+    color: #000;
+}
+
+/* opinie - ruchomy baner */
+.opinion {
+    position: relative;
+    background-image: url(/img/opinion.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+
+    filter: grayscale(0.85);
+    height: 50vh;
+}
+
+.opinion div {
+    z-index: 1;
+    position: absolute;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 8%;
+    text-shadow: 0 0 1px #000;
+}
+
+.opinion div h2 {
+    text-align: center;
+    font-size: 4rem;
+    color: white;
+
+
+
+
+}
+
+.opinion div .citate {
+    text-align: center;
+    font-size: 1.6rem;
+    color: rgb(200, 200, 200);
+    padding: 15%;
+    font-weight: 200;
+
+}
+
+.opinion div .citate .citate-author {
+    text-align: center;
+    font-size: 1.2rem;
+    color: rgb(255, 255, 255);
+
+    font-weight: 200;
+
+}
