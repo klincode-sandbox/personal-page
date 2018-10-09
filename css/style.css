@@ -171,7 +171,7 @@ nav ul li:hover .sub-menu {
 /* header */
 
 header {
-    background-image: url(/img/motto.jpg);
+    background-image: url(../img/motto.jpg);
     filter: grayscale(0.65) brightness(0.9);
     background-attachment: fixed;
     background-size: cover;
@@ -493,7 +493,7 @@ section.about .two-columns {
 
 
 .motto {
-    background-image: url(/img/baner22.jpg);
+    background-image: url(../img/baner22.jpg);
 
     filter: grayscale(0.95);
     background-position: 50% 50%;
@@ -708,7 +708,7 @@ section.about .two-columns {
 /* opinie - ruchomy baner */
 .opinion {
     position: relative;
-    background-image: url(/img/opinion.jpg);
+    background-image: url(../img/opinion.jpg);
     background-attachment: fixed;
     background-size: cover;
 
