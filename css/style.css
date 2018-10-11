@@ -15,9 +15,9 @@ html {
 }
 
 .wrapper {
-    position:relative;
+    position: relative;
     margin: 0 auto;
-    max-width: 1600px;
+    max-width: 1700px;
     /* overflow-x: hidden; */
     border-left: 1px solid rgba(207, 207, 207, 0.6);
     border-right: 1px solid rgba(207, 207, 207, 0.6);
@@ -49,10 +49,11 @@ li {
 }
 
 .logo {
-    position: absolute;
-    top: 4vh;
+    position: fixed;
+    top: 3.5vh;
     left: 30px;
-    min-width: 100px;
+    /* min-width: 100px; */
+    width: 250px;
     transform: translateY(-50%);
     text-transform: uppercase;
     line-height: 1.7;
@@ -64,12 +65,6 @@ li {
     font-size: 1.4rem;
 }
 
-.logo a h1 span {
-    display: inline-block;
-    width: 75%;
-    ;
-    border-bottom: 1px solid rgb(255, 255, 255);
-}
 
 .logo a {
     display: block;
@@ -107,11 +102,15 @@ nav .hamburger {
     display: none;
     top: 0%;
     right: 0%;
-
     width: 50px;
     height: 50px;
-    background: red;
-    ;
+    cursor: pointer;
+}
+
+nav .hamburger i {
+    color: #fff;
+    font-size: 4rem;
+    padding: 5px;
 }
 
 nav .navmenu li a {
@@ -212,7 +211,8 @@ header button {
     color: rgb(192, 192, 192);
     border-radius: 12%;
     cursor: pointer;
-    box-shadow: 0;
+
+    box-shadow: 0px 0px 10px 2px rgb(92, 92, 92);
 }
 
 header button div {
@@ -226,7 +226,7 @@ header button {
 }
 
 header button:hover {
-    box-shadow: 0px 0px 10px 2px rgb(92, 92, 92);
+    box-shadow: 0px 0px 10px 4px rgb(92, 92, 92);
     /* border: 1px solid rgb(255, 25, 25); */
 }
 
@@ -265,23 +265,27 @@ header button i {
 
 .flex-container {
     display: flex;
-    padding: 3% 0;
+    padding: 1% 0;
     height: 100%;
 }
 
 /* sekcja 1 about */
 
+.about h2 {
+    padding: 10px;
+}
+
 .about .more-info {
     position: absolute;
-    top: 7%;
-    right: 5%;
+    top: 20PX;
+    right: 10px;
     color: rgb(175, 174, 174);
     line-height: 1rem;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: 0.4s;
-    padding:10px;
+    padding: 10px;
 }
 
 .about .more-info:hover {
@@ -290,8 +294,8 @@ header button i {
 
 .about .more-info i {
     position: absolute;
-    top:9px;
-    right: -20px;
+    top: 9px;
+    right: 0px;
     transform: rotate(-90deg);
     font-size: 1rem;
 }
@@ -355,13 +359,14 @@ header button i {
 
 /* układ dwu-kolumnowy */
 section.about .two-columns {
-    flex-basis: 50vw;
-    flex-grow: 2;
+    flex-basis: 50%;
     padding: 1%;
     column-count: 2;
-    height: 100%;
+    flex-grow: 2;
     color: rgb(175, 174, 174);
 }
+
+
 
 /* sekcja 2 services */
 .services {
@@ -444,7 +449,8 @@ section.about .two-columns {
 .services .more-info {
 
     position: absolute;
-    bottom: 4%;
+    bottom: 10px;
+    ;
     left: 50%;
     transform: translateX(-50%);
     color: rgb(175, 174, 174);
@@ -453,7 +459,7 @@ section.about .two-columns {
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: 0.4s;
-    padding:10px;
+    padding: 20px;
 }
 
 .services .more-info i {
@@ -490,25 +496,14 @@ section.about .two-columns {
     text-shadow: 0px 0px 1px rgb(41, 41, 41);
 }
 
-.motto button,
-.work button {
+.motto .button {
     position: absolute;
-    right: 10%;
-    bottom: 15%;
-    padding: 10px 40px;
-    border-radius: 3px;
-    border: 0;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    font-size: 1.1rem;
-    font-weight: 200;
-    background-color: rgb(221, 221, 221);
-    cursor: pointer;
-    transition: 0.5s;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.motto button:hover,
-.work button:hover {
+.button:hover {
     background-color: #fff;
 }
 
@@ -529,8 +524,9 @@ section.about .two-columns {
     color: rgb(121, 121, 121);
     text-align: center;
     margin-top: 20px;
-    font-size: 1.6rem;
-    
+    padding: 0 3%;
+
+
 }
 
 .work .images {
@@ -616,9 +612,7 @@ section.about .two-columns {
     padding: 1%;
 }
 
-
-
-.more-info-work div button {
+.button {
     margin-top: 3%;
     padding: 10px 40px;
     border-radius: 3px;
@@ -680,7 +674,7 @@ section.about .two-columns {
     background-attachment: fixed;
     background-size: cover;
     filter: grayscale(0.85);
-    height: 50vh;
+    min-height: 50vh;
 }
 
 .opinion div {
@@ -722,6 +716,7 @@ section.about .two-columns {
     display: flex;
     justify-content: space-around;
     padding: 8vh 5%;
+
 }
 
 .template .image {
@@ -737,7 +732,6 @@ section.about .two-columns {
 .template .content {
     width: 50%;
     padding: 10px 0px;
-    color: #000;
     text-align: justify;
 }
 
@@ -748,7 +742,7 @@ section.about .two-columns {
 
 .template .content button {
     background-color: rgb(255, 255, 255);
-    margin-top: 5%;
+    margin: 2% auto;
     padding: 12px 40px;
     border-radius: 2px;
     border: 2px solid #000;
@@ -771,7 +765,7 @@ section.about .two-columns {
 .subscription {
     /* width: 100%; */
     position: relative;
-    height: 30vh;
+    min-height: 30vh;
     background: rgba(248, 248, 248, 0.836);
 
 }
@@ -779,16 +773,16 @@ section.about .two-columns {
 .subscription .content {
 
     min-width: 350px;
-    width: 35%;
+
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 1%;
+    padding: 3%;
 }
 
-.subscription  h2 {
-   
+.subscription h2 {
+
     color: #000;
     font-size: 1.7rem;
     text-align: center;
@@ -816,7 +810,7 @@ section.about .two-columns {
     color: #fff;
     height: 40px;
     width: 35%;
-    padding: 5px 20px;
+    padding: 5px 15px;
     border: 0;
     font-size: 1.2rem;
     text-transform: uppercase;
@@ -853,25 +847,52 @@ footer div a {
 }
 
 
-
-
-
-
-
-
-
-
-
 /* media queries */
-@media (max-width:1025px) {
-
- 
-    .wrapper {
-        border:0;
+/* media queries */
+/* media queries */
+/* media queries */
+/* media queries */
+/* media queries */
+/* media queries */
+/* media queries */
+/* media queries */
+/* media queries */
+/* media queries */
+/* media queries */
+@media (orientation : landscape) {
+    header .header-textblock {
+        top: 50%;
     }
+
+    header h2 {
+        font-size: 4rem;
+    }
+
+    header h3 {
+        font-size: 1.5rem;
+    }
+
+}
+
+
+
+
+@media (max-width:1025px) and (orientation:portrait) {
+
+
+    .wrapper {
+        border: 0;
+    }
+
+    .logo {
+        position: fixed;
+
+    }
+
     .logo a {
         font-size: 0.8rem;
     }
+
     nav .navmenu {
         width: 80%;
         right: 1%;
@@ -883,7 +904,7 @@ footer div a {
     }
 
     header .header-textblock {
-        top:45%;
+        top: 45%;
     }
 
     header h2 {
@@ -926,16 +947,21 @@ footer div a {
 
 }
 
-@media (max-width:980px) {
+
+
+@media (max-width:980px) and (orientation:portrait) {
 
     .logo {
+        position: absolute;
         top: 120px;
         left: 50%;
+        width: 350px;
         transform: translateX(-50%);
+
     }
 
     .logo i {
-        font-size: 2.6rem;
+        font-size: 3.3rem;
     }
 
     .logo a {
@@ -943,9 +969,7 @@ footer div a {
         border: 0px;
     }
 
-    .logo a h1 span {
-        border-bottom: 0px;
-    }
+
 
     nav {
         position: relative;
@@ -962,14 +986,16 @@ footer div a {
     }
 
     header .header-textblock {
-        top:50%;
+        top: 50%;
         left: 50%;
         transform: translateX(-50%);
         width: 70%;
     }
+
     header {
         background-position: 70%;
     }
+
     header h2 {
         font-size: 3.3rem;
         text-align: center;
@@ -1012,11 +1038,7 @@ footer div a {
         text-align: center;
     }
 
-    .motto button {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-    }
+
 
     .whywe {
         padding: 0;
@@ -1032,6 +1054,12 @@ footer div a {
     .whywe .features .feature {
         padding: 5%;
         flex-basis: 50%;
+        text-align: center;
+
+    }
+
+    .whywe .features .feature h3 {
+        text-align: center;
     }
 
     .opinion div .citate {
@@ -1051,9 +1079,9 @@ footer div a {
 
 }
 
-@media (max-width:800px) {
+@media (max-width:800px) and (orientation:portrait) {
     html {
-        font-size: 11PX;
+        font-size: 11px;
     }
 
     nav {
@@ -1069,7 +1097,7 @@ footer div a {
     }
 
     .logo i {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
     .logo a {
@@ -1077,13 +1105,12 @@ footer div a {
         border: 0px;
     }
 
-    .logo a h1 span {
-        border-bottom: 0px;
+    nav .hamburger i {
+        font-size: 3.5rem;
     }
 
-
     header .header-textblock {
-        top:50%;
+        top: 50%;
         width: 90%;
     }
 
@@ -1125,7 +1152,6 @@ footer div a {
         flex-wrap: wrap;
         justify-content: center;
         width: 100%;
-
     }
 
     .vector-image {
@@ -1244,19 +1270,23 @@ footer div a {
     .opinion div .citate .citate-author {
         font-size: 1rem;
     }
+
     .template .content h2 {
         text-align: center;
-        }
+    }
+
     .template .image {
-       display: none;
+        display: none;
     }
+
     .template .content {
-        width:100%;
-        height:30vh;
+        width: 100%;
+        height: 30vh;
     }
+
     .template .content button {
-    position: absolute;
-        left:50%;
+        position: absolute;
+        left: 50%;
         transform: translateX(-50%);
     }
 
@@ -1269,24 +1299,34 @@ footer div a {
     }
 }
 
-@media (max-width:726px)
-{
+@media (max-width:726px) and (orientation:portrait) {
+
+    header h3 {
+        font-size: 1.4rem;
+        letter-spacing: 8px;
+        font-weight: 300;
+    }
+
     header .header-textblock {
         width: 100%;
-        padding:0 1%;
+        padding: 0 1%;
     }
+
     .work .images .image {
         width: 100%;
 
     }
 }
 
-@media (max-width:615px)
-{
+@media (max-width:615px) and (orientation:portrait) {
+    /* .logo i {
+        font-size: 1.7rem;
+    } */
+
     header .header-textblock {
         top: 47%;
         width: 100%;
-        padding:0 1%;
+        padding: 0 1%;
     }
 
     header h2 {
@@ -1297,60 +1337,128 @@ footer div a {
     }
 
     header h3 {
-        font-size: 1.4rem;
-        letter-spacing: 9px;
+        font-size: 1.3rem;
+        letter-spacing: 7px;
         /* padding-top:10%; */
-        
+
     }
 
     .about .more-info {
         right: 6%;
-        font-size: 1.2rem;;
+        font-size: 1.2rem;
+        ;
     }
 
     .vector-images {
         width: 100%;
+
+    }
+
+    .vector-images {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
     }
 
     .vector-image {
-        width:50%;
+
+        text-align: center;
+        width: 50%;
     }
+
+    .vector-image i {
+        font-size: 9rem;
+
+    }
+
 
     .motto h3 {
         margin-bottom: 80px;
         font-size: 1.5rem;
- 
+
     }
+
     .motto button {
-    bottom: 10%;
+        bottom: 10%;
+    }
+
+    .opinion div h2 {
+        font-size: 3.3rem;
+
+    }
+
+    .opinion div .citate {
+        font-size: 1.5rem;
+        line-height: 1.7rem;
+        text-align: justify;
+        /* padding-top: 10%; */
+    }
+
+    .template .content button {
+        background-color: rgb(255, 255, 255);
+        padding: 12px 20px;
+    }
+
+    .template .content {
+        width: 100%;
+        padding: 5% 0px;
+        height: 40vh;
+    }
+
+    .motto button,
+    .work button {
+        padding: 10px 15px;
+        font-size: 1rem;
+        ;
+    }
 }
 
-.opinion div h2 {
-    font-size: 3.3rem;
+@media (max-width:480px) and (orientation:portrait) {
+    nav .hamburger i {
+        font-size: 2.8rem;
+        padding: 8px;
+    }
 
-}
+    .logo {
+        width: 250px;
+        top: 120px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 
-.opinion div .citate {
-    font-size: 1.5rem;
-    line-height: 1.7rem;
-    text-align: justify;
-    /* padding-top: 10%; */
-}
+    .logo h1 {
+        font-size: 3rem;
+        ;
+    }
 
-.template .content button {
-    background-color: rgb(255, 255, 255);
-    padding: 12px 20px;
-}
+    .services .text-content .two-columns {
+        margin-bottom: 75px;
+    }
 
-.template .content {
-    width: 100%;
-    padding: 5% 0px;
-height:40vh;
-}
-.motto button,
-.work button {
-    padding: 10px 15px;
-    font-size: 1rem;;
-}
-}
+    .opinion div h2 {
+        padding-bottom: 20px;
+    }
 
+    .opinion div .citate {
+        font-size: 1.3rem;
+        padding: 20% 5%;
+
+    }
+
+    .opinion div .citate .citate-author {
+        text-align: center;
+        font-size: 1.1rem;
+        color: rgb(255, 255, 255);
+        font-weight: 200;
+    }
+
+    .template {
+        height: 70vh;
+    }
+
+    .template .content button {
+        margin: 5% auto;
+        padding: 12px 10px;
+
+    }
+}
