@@ -16,12 +16,15 @@ html {
 
 .wrapper {
     margin: 0 auto;
-    max-width: 1700px;
+    max-width: 1600px;
     /* overflow-x: hidden; */
+    border-left: 1px solid rgba(207, 207, 207, 0.6);
+    border-right: 1px solid rgba(207, 207, 207, 0.6);
+
 }
 
 h2 {
-    color: rgb(112, 112, 112);
+    color: rgb(153, 152, 152);
     font-size: 2.3rem;
     font-weight: 200;
     text-transform: uppercase;
@@ -185,10 +188,11 @@ header h2 {
     color: #fff;
     line-height: 10rem;
     font-weight: 300;
+    text-shadow: 0 0 1 rgba(0, 0, 0, 0.5);
 }
 
 header h3 {
-    color: rgb(172, 172, 172);
+    color: rgb(228, 228, 228);
     font-size: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 10px;
@@ -267,8 +271,8 @@ header button i {
 
 .about .more-info {
     position: absolute;
-    top: 60px;
-    right: 100px;
+    top: 7%;
+    right: 5%;
     color: rgb(175, 174, 174);
     line-height: 1rem;
     text-decoration: none;
@@ -353,7 +357,7 @@ section.about .two-columns {
     padding: 1%;
     column-count: 2;
     height: 100%;
-    color: #000;
+    color: rgb(175, 174, 174);
 }
 
 /* sekcja 2 services */
@@ -410,7 +414,7 @@ section.about .two-columns {
 .services .text-content .citate {
     flex-basis: 180px;
     flex-grow: 1;
-    color: rgb(63, 63, 63);
+    /* color: rgb(63, 63, 63); */
     font-size: 1.8rem;
     letter-spacing: 3px;
     line-height: 3.5rem;
@@ -430,12 +434,14 @@ section.about .two-columns {
     flex-basis: 50px;
     flex-grow: 5;
     columns: 2;
-    color: #000;
+    /* color: #000; */
+    margin-bottom: 15%;
 }
 
 .services .more-info {
+
     position: absolute;
-    bottom: 50px;
+    bottom: 4%;
     left: 50%;
     transform: translateX(-50%);
     color: rgb(175, 174, 174);
@@ -512,22 +518,21 @@ section.about .two-columns {
 
 .work h2 {
     text-align: center;
+    padding: 3% 10%;
 }
 
 .work h2+div {
-    color: #999;
+    color: rgb(121, 121, 121);
     text-align: center;
     margin-top: 20px;
-    font-size: 1.5rem;
-    text-transform: uppercase;
+    font-size: 1.6rem;
+    
 }
 
 .work .images {
-
     display: flex;
     justify-content: space-between;
     margin-top: 5%;
-
 }
 
 .work .images img {
@@ -544,7 +549,6 @@ section.about .two-columns {
     flex-grow: 0;
     width: 31%;
     overflow: hidden;
-
 }
 
 .work .images .image:hover>.mask {
@@ -588,34 +592,40 @@ section.about .two-columns {
 
 }
 
-.work .more-info {
+.more-info-work {
+    position: relative;
     background-color: rgba(0, 0, 0, 0.931);
     text-align: center;
-    height: 25vh;
-    margin-top: 1%;
-    padding: 50px;
+    height: 30vh;
+    /* padding: 50px; */
+    margin-bottom: 5%;
 }
 
 
-.work .more-info div {
-    position: relative;
-}
-
-.work .more-info div h2 {
+.more-info-work div {
     position: absolute;
-    top: 0px;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
-    display: block;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    /* height: 50%; */
+    padding: 1%;
 }
 
-.work .more-info div button {
-    position: absolute;
-    top: 50px;
-    left: 50%;
-    display: block;
-    height: 30px;
-    transform: translateX(-50%);
+
+
+.more-info-work div button {
+    margin-top: 3%;
+    padding: 10px 40px;
+    border-radius: 3px;
+    border: 0;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    font-weight: 200;
+    background-color: rgb(221, 221, 221);
+    cursor: pointer;
+    transition: 0.5s;
 }
 
 /* dlaczego my */
@@ -666,7 +676,7 @@ section.about .two-columns {
     background-attachment: fixed;
     background-size: cover;
     filter: grayscale(0.85);
-    height: 60vh;
+    height: 50vh;
 }
 
 .opinion div {
@@ -676,23 +686,24 @@ section.about .two-columns {
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.4);
-    padding: 8%;
+    padding: 3%;
     z-index: 1;
 
 }
 
 .opinion div h2 {
     text-align: center;
-    font-size: 4rem;
+    font-size: 3.8rem;
     color: rgb(255, 255, 255);
+
 }
 
 .opinion div .citate {
     text-align: center;
     font-size: 1.7rem;
     color: rgb(200, 200, 200);
-    padding: 15%;
     font-weight: 200;
+    padding-top: 10%;
 }
 
 .opinion div .citate .citate-author {
@@ -706,7 +717,7 @@ section.about .two-columns {
 .template {
     display: flex;
     justify-content: space-around;
-    padding: 9vh 80px;
+    padding: 8vh 5%;
 }
 
 .template .image {
@@ -717,6 +728,13 @@ section.about .two-columns {
     width: 100%;
     max-width: 100%;
     filter: grayscale(0.65)
+}
+
+.template .content {
+    width: 50%;
+    padding: 10px 0px;
+    color: #000;
+    text-align: justify;
 }
 
 .template .content h2 {
@@ -736,6 +754,7 @@ section.about .two-columns {
     line-height: 1.1rem;
     font-weight: 200;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 .template .content button:hover {
@@ -743,15 +762,10 @@ section.about .two-columns {
     color: #fff;
 }
 
-.template .content {
-    width: 50%;
-    padding: 10px 0px;
-    color: #000;
-    text-align: justify;
-}
 
 /* subscription */
 .subscription {
+    /* width: 100%; */
     position: relative;
     height: 30vh;
     background: rgba(248, 248, 248, 0.836);
@@ -759,13 +773,18 @@ section.about .two-columns {
 }
 
 .subscription .content {
+
+    min-width: 350px;
+    width: 35%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    padding: 1%;
 }
 
-.subscription .content h2 {
+.subscription  h2 {
+   
     color: #000;
     font-size: 1.7rem;
     text-align: center;
@@ -776,10 +795,10 @@ section.about .two-columns {
     background: rgb(255, 255, 255);
     height: 40px;
     border: 1px solid rgba(230, 230, 230, 0.795);
-    padding: 10px 20px;
+    padding: 10px 15px;
     margin-top: 3%;
     text-transform: uppercase;
-    width: 65%;
+    width: 55%;
 }
 
 .subscription .content .note {
@@ -792,11 +811,13 @@ section.about .two-columns {
     background: rgb(73, 73, 73);
     color: #fff;
     height: 40px;
-    width: 30%;
+    width: 35%;
     padding: 5px 20px;
     border: 0;
+    font-size: 1.2rem;
     text-transform: uppercase;
     letter-spacing: 1px;
+    cursor: pointer;
 }
 
 .subscription .content input[type='button']:hover {
@@ -826,6 +847,16 @@ footer div a {
     letter-spacing: 4px;
     font-weight: 200;
 }
+
+
+
+
+
+
+
+
+
+
 
 /* media queries */
 @media (max-width:1025px) {
@@ -882,11 +913,37 @@ footer div a {
         columns: 1;
     }
 
+    .opinion {
+
+        height: 40vh;
+    }
 
 }
 
-@media (max-width:950px) {
+@media (max-width:980px) {
+
+    .logo {
+        top: 120px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .logo i {
+        font-size: 2.6rem;
+    }
+
+    .logo a {
+        font-size: 2.2rem;
+        border: 0px;
+    }
+
+    .logo a h1 span {
+        border-bottom: 0px;
+    }
+
     nav {
+        position: relative;
+        height: 0;
         background: transparent;
     }
 
@@ -898,18 +955,25 @@ footer div a {
         display: block;
     }
 
-
     header .header-textblock {
-        bottom: 250px;
-
+        bottom: 270px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 70%;
     }
-
+    header {
+        background-position: 70%;
+    }
     header h2 {
-        font-size: 3.5rem;
+        font-size: 3.3rem;
+        text-align: center;
+        line-height: 1.7;
+        padding-bottom: 5%;
     }
 
     header h3 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+        text-align: center;
     }
 
     header button {
@@ -930,7 +994,7 @@ footer div a {
     }
 
     .services {
-        padding-bottom: 15%;
+        padding-bottom: 5%;
     }
 
     .motto h2 {
@@ -964,9 +1028,24 @@ footer div a {
         flex-basis: 50%;
     }
 
+    .opinion div .citate {
+        padding-top: 15%;
+    }
+
+    .template .image {
+        width: 35%;
+    }
+
+    .template .content {
+        width: 70%;
+        padding: 10px 0px;
+        color: #000;
+        text-align: justify;
+    }
+
 }
 
-@media (max-width:600px) {
+@media (max-width:800px) {
     html {
         font-size: 11PX;
     }
@@ -974,12 +1053,11 @@ footer div a {
     nav {
         position: relative;
         height: 0;
-
     }
 
     .logo {
         top: 120px;
-        left: 45%;
+        left: 50%;
         transform: translateX(-50%);
 
     }
@@ -999,8 +1077,8 @@ footer div a {
 
 
     header .header-textblock {
-        bottom: 190px;
-
+        bottom: 270px;
+        width: 80%;
     }
 
     header h2 {
@@ -1011,7 +1089,7 @@ footer div a {
     }
 
     header h3 {
-        font-size: 1.1rem;
+        font-size: 1.5rem;
         text-align: center;
     }
 
@@ -1034,8 +1112,7 @@ footer div a {
     }
 
     .services {
-        padding-bottom: 15%;
-
+        padding-bottom: 5%;
     }
 
     .vector-images {
@@ -1046,11 +1123,11 @@ footer div a {
     }
 
     .vector-image {
-        padding: 10%;
+        padding: 5%;
     }
 
     .vector-image i {
-        font-size: 10rem;
+        font-size: 9rem;
     }
 
     .motto h2 {
@@ -1068,6 +1145,29 @@ footer div a {
         transform: translateX(-50%);
     }
 
+    .work .images {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .work .images .image {
+        width: 75%;
+        overflow: hidden;
+        flex-grow: 0;
+    }
+
+    .more-info-work h2 {
+        font-size: 1.7rem;
+        ;
+    }
+
+    .more-info-work div button {
+        margin-top: 10%;
+        font-size: 1rem;
+
+    }
+
     .whywe {
         padding: 0;
     }
@@ -1077,16 +1177,17 @@ footer div a {
         flex-wrap: wrap;
         justify-content: space-between;
 
+
     }
 
     .whywe .features .feature {
-        padding: 5%;
+        padding: 3%;
         flex-basis: 100%;
     }
 
     .whywe .features .feature i {
         text-align: center;
-        font-size: 10rem;
+        font-size: 12rem;
     }
 
     .whywe .features .feature h3 {
@@ -1117,4 +1218,123 @@ footer div a {
         width: 70%;
         transform: translateX(-50%);
     }
+
+    .opinion {
+
+        height: 35vh;
+    }
+
+    .opinion div h2 {
+
+        font-size: 3rem;
+    }
+
+    .opinion div .citate {
+
+        font-size: 1.5rem;
+        padding-top: 15%;
+    }
+
+    .opinion div .citate .citate-author {
+        font-size: 1rem;
+    }
+    .template .content h2 {
+        text-align: center;
+        }
+    .template .image {
+       display: none;
+    }
+    .template .content {
+        width:100%;
+        height:30vh;
+    }
+    .template .content button {
+    position: absolute;
+        left:50%;
+        transform: translateX(-50%);
+    }
+
+    footer {
+        height: 20vh;
+    }
+
+    footer div {
+        line-height: 20vh;
+    }
+}
+
+@media (max-width:726px)
+{
+    header .header-textblock {
+        bottom: 250px;
+        width: 100%;
+        padding:0 3%;
+    }
+    .work .images .image {
+        width: 100%;
+
+    }
+}
+
+@media (max-width:615px)
+{
+    header h2 {
+        font-size: 2.8rem;
+        text-transform: uppercase;
+        letter-spacing: 25px;
+        line-height: 5rem;
+    }
+
+    header h3 {
+        font-size: 1.4rem;
+        letter-spacing: 9px;
+        
+    }
+
+    .about .more-info {
+        right: 6%;
+        font-size: 1.2rem;;
+    }
+
+    .vector-images {
+        width: 100%;
+    }
+
+    .vector-image {
+        width:50%;
+    }
+
+    .motto h3 {
+        margin-bottom: 80px;
+        font-size: 1.5rem;
+ 
+    }
+    .motto button {
+    bottom: 10%;
+    padding: 10px 20px;
+    border-radius: 3px;
+    border: 0;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    font-weight: 200;
+    background-color: rgb(221, 221, 221);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.template .content button {
+    background-color: rgb(255, 255, 255);
+    padding: 12px 20px;
+}
+
+.template .content {
+    width: 100%;
+    padding: 5% 0px;
+height:35vh;
+}
+.motto button,
+.work button {
+    padding: 10px 15px;
+}
 }
