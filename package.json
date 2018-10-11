@@ -1,0 +1,19 @@
+{
+  "name": "web1",
+  "version": "1.0.0",
+  "description": "pierwszy projekt - nauka",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://homer666@bitbucket.org/klincodepl/web1.git"
+  },
+  "keywords": [
+    "web"
+  ],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/klincodepl/web1#readme"
+}
